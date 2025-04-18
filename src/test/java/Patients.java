@@ -12,6 +12,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
+import javax.swing.JOptionPane;
+import java.io.FileWriter;
 
 public class Patients extends javax.swing.JFrame {
 
@@ -47,10 +49,11 @@ public class Patients extends javax.swing.JFrame {
                patient.setContact(curData[5]);
                allpatients.add(patient);
            }
-           
+           scanner.close();
        }catch(Exception e){
            
        }
+       
    }
    void WriteallData(){
      allPData.setText("");
@@ -198,6 +201,11 @@ public class Patients extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 153, 0));
         jButton1.setText("Save ");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 51, 255));
@@ -341,6 +349,68 @@ public class Patients extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_contactActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(id.getText().equals("")||name.getText().equals("")||age.getText().equals("")||gender.getText().equals("")||address.getText().equals("")||contact.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "Please enter all the required fields");
+        }
+        else if(checkIDC())
+        {
+            JOptionPane.showMessageDialog(null,"The Id or Contact already exists");
+        }
+        else 
+        {
+            try{
+             Patient patient = new Patient();
+            patient.setId(Integer.parseInt(id.getText()));
+            patient.setName(name.getText());
+            patient.setAge(Integer.parseInt(age.getText()));
+            patient.setGender(gender.getText());
+            patient.setAddress(address.getText());
+            patient.setContact(contact.getText());
+            allpatients.add(patient);
+            
+            id.setText("");
+            name.setText("");
+            gender.setText("");
+            age.setText("");
+            address.setText("");
+            gender.setText("");
+            contact.setText("");
+            WriteallData();
+            Savealldata();
+            
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null,"The Id and Age MUST be entered as intergers");
+            }
+            
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+    boolean checkIDC()
+    {
+        for(int i=0;i<allpatients.size();i++)
+        {
+            if(id.getText().equals(allpatients.get(i).getId()+"")|| contact.getText().equals(allpatients.get(i).getContact()+""))
+            {return true;}
+        }
+        return false;
+    }
+    void Savealldata()
+    {
+        try {
+            FileWriter filewriter = new FileWriter("C:/Users/lenovo/Documents/NetBeansProjects/SoftwareEngProj/pdata.txt");
+            for(int i=0;i<allpatients.size();i++)
+            {
+                filewriter.write(allpatients.get(i).getId()+";"+allpatients.get(i).getAge()+";"+allpatients.get(i).getGender()+";"+allpatients.get(i).getAddress()+";"+allpatients.get(i).getContact()+";");
+                filewriter.close();
+            }
+        }catch(Exception e)
+        {
+            
+        }
+    }
     /**
      * @param args the command line arguments
      */
