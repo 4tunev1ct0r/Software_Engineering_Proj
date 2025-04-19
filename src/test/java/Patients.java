@@ -60,7 +60,7 @@ public class Patients extends javax.swing.JFrame {
      
      for(int i=0;i<allpatients.size();i++)
      {
-         allPData.append(allpatients.get(i).getId()+"  "+allpatients.get(i).getAge()+"  "+allpatients.get(i).getGender()+"  "+allpatients.get(i).getAddress()+"  "+allpatients.get(i).getContact()+"  ");
+         allPData.append(allpatients.get(i).getId()+allpatients.get(i).getName()+"  "+allpatients.get(i).getAge()+"  "+allpatients.get(i).getGender()+"  "+allpatients.get(i).getAddress()+"  "+allpatients.get(i).getContact()+"  ");
      }
    }
     
@@ -403,7 +403,7 @@ public class Patients extends javax.swing.JFrame {
             FileWriter filewriter = new FileWriter("C:/Users/lenovo/Documents/NetBeansProjects/SoftwareEngProj/pdata.txt");
             for(int i=0;i<allpatients.size();i++)
             {
-                filewriter.write(allpatients.get(i).getId()+";"+allpatients.get(i).getAge()+";"+allpatients.get(i).getGender()+";"+allpatients.get(i).getAddress()+";"+allpatients.get(i).getContact()+";");
+                filewriter.write(allpatients.get(i).getId()+";"+allpatients.get(i).getName()+";"+allpatients.get(i).getAge()+";"+allpatients.get(i).getGender()+";"+allpatients.get(i).getAddress()+";"+allpatients.get(i).getContact()+";");
                 filewriter.close();
             }
         }catch(Exception e)
