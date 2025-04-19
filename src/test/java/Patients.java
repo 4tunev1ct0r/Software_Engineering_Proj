@@ -60,7 +60,7 @@ public class Patients extends javax.swing.JFrame {
      
      for(int i=0;i<allpatients.size();i++)
      {
-         allPData.append(allpatients.get(i).getId()+"  "+allpatients.get(i).getAge()+"  "+allpatients.get(i).getGender()+"  "+allpatients.get(i).getAddress()+"  "+allpatients.get(i).getContact()+"  ");
+         allPData.append(allpatients.get(i).getId()+allpatients.get(i).getName()+"  "+allpatients.get(i).getAge()+"  "+allpatients.get(i).getGender()+"  "+allpatients.get(i).getAddress()+"  "+allpatients.get(i).getContact()+"  ");
      }
    }
     
@@ -305,8 +305,8 @@ public class Patients extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -403,7 +403,7 @@ public class Patients extends javax.swing.JFrame {
             FileWriter filewriter = new FileWriter("C:/Users/lenovo/Documents/NetBeansProjects/SoftwareEngProj/pdata.txt");
             for(int i=0;i<allpatients.size();i++)
             {
-                filewriter.write(allpatients.get(i).getId()+";"+allpatients.get(i).getAge()+";"+allpatients.get(i).getGender()+";"+allpatients.get(i).getAddress()+";"+allpatients.get(i).getContact()+";");
+                filewriter.write(allpatients.get(i).getId()+";"+allpatients.get(i).getName()+";"+allpatients.get(i).getAge()+";"+allpatients.get(i).getGender()+";"+allpatients.get(i).getAddress()+";"+allpatients.get(i).getContact()+";");
                 filewriter.close();
             }
         }catch(Exception e)
