@@ -241,6 +241,9 @@ public class Homepage extends javax.swing.JFrame {
         medicine.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 255), 8, true));
         medicine.setForeground(new java.awt.Color(255, 255, 255));
         medicine.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                medicineMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 medicineMouseEntered(evt);
             }
@@ -459,6 +462,11 @@ poweroff.setBackground(java.awt.Color.WHITE);
             this.setVisible(false);
             patients.setVisible(true);
     }//GEN-LAST:event_patientMouseClicked
+
+    private void medicineMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_medicineMouseClicked
+    this.setVisible(false);
+    new Medicines().setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_medicineMouseClicked
 
     /**
      * @param args the command line arguments
