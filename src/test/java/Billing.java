@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 public class Billing {
     
-    Patient patient;
-    ArrayList<Medicine> medicines = new ArrayList<>();
+    int patientID;
+    ArrayList<Integer> medicinesID;
     public int fee;
     public String Recommendation, date;
 
     public Billing(){
-        this.patient = null;
+        this.patientID = 0;
         this.date = "";
         this.fee = 0;
         this.Recommendation = "";
@@ -15,20 +15,20 @@ public class Billing {
     
     //this is the section for our setters and getters for the class
 
-    public Patient getPatient() {
-        return patient;
+    public int getPatientID() {
+        return patientID;
     }
 
-    public void setPatient(Patient patient) {
-        this.patient = patient;
+    public void setPatientID(int patientID) {
+        this.patientID = patientID;
     }
 
-    public ArrayList<Medicine> getMedicines() {
-        return medicines;
+    public ArrayList<Integer> getMedicinesID() {
+        return medicinesID;
     }
 
-    public void setMedicines(Medicine medicines) {
-        this.medicines.add(medicines);
+    public void setMedicinesID(int medicinesID) {
+        this.medicinesID.add(medicinesID);
     }
 
     public int getFee() {
@@ -53,11 +53,6 @@ public class Billing {
 
     public void setDate(String date) {
         this.date = date;
-    }
-
-    @Override
-    public String toString() {
-        return "Billing{" + "patient=" + patient + ", medicines=" + medicines + ", fee=" + fee + ", Recommendation=" + Recommendation + ", date=" + date + '}';
     }
 
    

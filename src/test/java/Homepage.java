@@ -6,7 +6,12 @@
 /**
  *
  * @author lenovo
+ *
  */
+
+import javax.swing.JOptionPane;
+
+
 public class Homepage extends javax.swing.JFrame {
 
     /**
@@ -39,8 +44,7 @@ public class Homepage extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         poweroff = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
+        exitapp = new javax.swing.JLabel();
         patient = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -68,7 +72,7 @@ public class Homepage extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 255)));
 
         report.setBackground(new java.awt.Color(255, 255, 255));
-        report.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 255), 8, true));
+        report.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 8, true));
         report.setForeground(new java.awt.Color(255, 255, 255));
         report.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -82,7 +86,7 @@ public class Homepage extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel11.setText("Reports ");
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/reportsnow_1_optimized.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/newreport.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setText("Reports");
@@ -98,9 +102,9 @@ public class Homepage extends javax.swing.JFrame {
                     .addComponent(jLabel11))
                 .addGap(38, 38, 38))
             .addGroup(reportLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addComponent(jLabel10)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         reportLayout.setVerticalGroup(
             reportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,7 +118,7 @@ public class Homepage extends javax.swing.JFrame {
         );
 
         earnings.setBackground(new java.awt.Color(255, 255, 255));
-        earnings.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 255), 8, true));
+        earnings.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 8, true));
         earnings.setForeground(new java.awt.Color(255, 255, 255));
         earnings.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -125,7 +129,7 @@ public class Homepage extends javax.swing.JFrame {
             }
         });
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/moneynow_optimized.png"))); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tryearnigns.png"))); // NOI18N
 
         jLabel21.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel21.setText("Earnings");
@@ -135,18 +139,18 @@ public class Homepage extends javax.swing.JFrame {
         earningsLayout.setHorizontalGroup(
             earningsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(earningsLayout.createSequentialGroup()
-                .addGroup(earningsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(earningsLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(earningsLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel21)))
+                .addGap(22, 22, 22)
+                .addComponent(jLabel21)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, earningsLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         earningsLayout.setVerticalGroup(
             earningsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(earningsLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
@@ -154,7 +158,7 @@ public class Homepage extends javax.swing.JFrame {
         );
 
         poweroff.setBackground(new java.awt.Color(255, 255, 255));
-        poweroff.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 255), 8, true));
+        poweroff.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 8, true));
         poweroff.setForeground(new java.awt.Color(255, 255, 255));
         poweroff.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -165,38 +169,32 @@ public class Homepage extends javax.swing.JFrame {
             }
         });
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/powernow_1_optimized.png"))); // NOI18N
-
-        jLabel25.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel25.setText("Power-off");
+        exitapp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/newandlassttttt.png"))); // NOI18N
+        exitapp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitappMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout poweroffLayout = new javax.swing.GroupLayout(poweroff);
         poweroff.setLayout(poweroffLayout);
         poweroffLayout.setHorizontalGroup(
             poweroffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(poweroffLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(poweroffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(poweroffLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(poweroffLayout.createSequentialGroup()
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, poweroffLayout.createSequentialGroup()
+                .addContainerGap(23, Short.MAX_VALUE)
+                .addComponent(exitapp, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
         );
         poweroffLayout.setVerticalGroup(
             poweroffLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(poweroffLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel25)
+                .addComponent(exitapp, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         patient.setBackground(new java.awt.Color(255, 255, 255));
-        patient.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 255), 8, true));
+        patient.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 8, true));
         patient.setForeground(new java.awt.Color(255, 255, 255));
         patient.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -210,7 +208,7 @@ public class Homepage extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/patientnow_1_optimized.png"))); // NOI18N
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userpic.png"))); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel19.setText("Patient");
@@ -238,7 +236,7 @@ public class Homepage extends javax.swing.JFrame {
         );
 
         medicine.setBackground(new java.awt.Color(255, 255, 255));
-        medicine.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 255), 8, true));
+        medicine.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 8, true));
         medicine.setForeground(new java.awt.Color(255, 255, 255));
         medicine.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -252,7 +250,7 @@ public class Homepage extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medicinenow_optimized.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/newpills.png"))); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("Medicine");
@@ -262,13 +260,11 @@ public class Homepage extends javax.swing.JFrame {
         medicineLayout.setHorizontalGroup(
             medicineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(medicineLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(medicineLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(21, 21, 21)
+                .addGroup(medicineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         medicineLayout.setVerticalGroup(
             medicineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -280,7 +276,7 @@ public class Homepage extends javax.swing.JFrame {
         );
 
         checkup.setBackground(new java.awt.Color(255, 255, 255));
-        checkup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 255), 8, true));
+        checkup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 8, true));
         checkup.setForeground(new java.awt.Color(255, 255, 255));
         checkup.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -292,6 +288,11 @@ public class Homepage extends javax.swing.JFrame {
         });
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checkupnow_optimized.png"))); // NOI18N
+        jLabel22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel22MouseClicked(evt);
+            }
+        });
 
         jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel23.setText("Checkup");
@@ -318,7 +319,7 @@ public class Homepage extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Faceless_illustration_of_doctor_with_stethoscope_1_35(1).jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/largeicon2.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -339,30 +340,31 @@ public class Homepage extends javax.swing.JFrame {
                     .addComponent(earnings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(poweroff, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(report, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addGap(58, 58, 58))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(0, 14, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(patient, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(report, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(medicine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(earnings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(checkup, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(poweroff, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 36, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(patient, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(report, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(medicine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(earnings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(checkup, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(poweroff, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(18, 18, 18))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7)
-                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -376,9 +378,8 @@ public class Homepage extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(218, Short.MAX_VALUE))
+                .addContainerGap(226, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -405,7 +406,7 @@ public class Homepage extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        setSize(new java.awt.Dimension(648, 520));
+        setSize(new java.awt.Dimension(648, 492));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -468,6 +469,20 @@ poweroff.setBackground(java.awt.Color.WHITE);
     new Medicines().setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_medicineMouseClicked
 
+    private void exitappMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitappMouseClicked
+        int choice = JOptionPane.showConfirmDialog(null, "Do you wish to exit? ","Confirmation ", JOptionPane.YES_NO_OPTION);
+        if(choice == JOptionPane.NO_OPTION)
+        { JOptionPane.showMessageDialog(null, "Operation Cancelled");}
+        else
+        {this.dispose();}
+        
+    }//GEN-LAST:event_exitappMouseClicked
+//****************Latest Change this is the problem if anything goes wrong ******************************
+    private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
+        this.setVisible(false);
+        new Checkup2().setVisible(true);
+    }//GEN-LAST:event_jLabel22MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -506,6 +521,7 @@ poweroff.setBackground(java.awt.Color.WHITE);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel checkup;
     private javax.swing.JPanel earnings;
+    private javax.swing.JLabel exitapp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -516,8 +532,6 @@ poweroff.setBackground(java.awt.Color.WHITE);
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
